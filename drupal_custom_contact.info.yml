@@ -1,0 +1,5 @@
+name: Drupal Custom Contact Form
+type: module
+description: Custom Contact form in a block for Haileys portfolio website
+package: OHSU
+core: 8.x
