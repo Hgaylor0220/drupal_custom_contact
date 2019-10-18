@@ -1,5 +1,5 @@
 drupal_custom_contact.contact_form:
-  path: '/contact'
+  path: '/contact-me'
   defaults:
     _form: '\Drupal\drupal_custom_contact\Form\HaileyCustomContactForm'
     _title: 'Contact Hailey'
