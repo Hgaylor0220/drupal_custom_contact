@@ -23,23 +23,6 @@ class HaileyCustomContactForm extends FormBase implements ContainerInjectionInte
   /**
    * {@inheritdoc}
    */
-  public function __construct(LoggerChannelFactory $logger) {
-    $this->logger = $logger;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    // Load the services required to construct this class.
-    return new static(
-      $container->get('logger.factory'),
-    );
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function getFormId() {
     return 'drupal_custom_contact';
   }
