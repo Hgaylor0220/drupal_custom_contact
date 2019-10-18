@@ -1,1 +1,22 @@
 <?php
+
+/**
+ * Implementing hook_mail()
+ *
+ * Tutorial on sending mail:
+ * https://www.valuebound.com/resources/blog/how-to-send-mail-programmatically-drupal-8
+ */
+function drupal_custom_contact_mail($key, &$message, $params) {
+
+  $options = array(
+   'langcode' => $message['langcode'],
+ );
+
+ switch ($key) {
+   case 'custom_contact':
+     $message['from'] = $params['contact_mail'];
+     $message['subject'] = t('New contact form submission from @name', array('@name' => $params['contact_name']));
+     $message['body'][] = $params['contact_message'];
+     break;
+ }
+}
